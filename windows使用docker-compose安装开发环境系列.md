@@ -4,7 +4,7 @@
 
 ## 环境准备
 
-Docker 安装教程：[docker 安装教程](./win10专业版使用Docker安装开发环境/安装.md)
+Docker 安装教程：[docker 安装教程](./基础/win10专业版使用Docker安装开发环境/安装.md)
 
 > 注：建议使用`Git Bash Here`执行以下命令
 
