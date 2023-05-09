@@ -13,9 +13,9 @@ docker-compose -f docker-compose-elk.yml -p elk up -d
 chmod -R 777 ./elk
 ```
 
-1. ES访问地址：[`ip地址:9200`](http://www.zhengqingya.com:9200)
+1. ES访问地址：[`ip地址:9200`](http://www.xxx.com:9200)
    默认账号密码：`elastic/123456`
-2. kibana访问地址：[`ip地址:5601`](http://www.zhengqingya.com:5601)
+2. kibana访问地址：[`ip地址:5601`](http://www.xxx.com:5601)
    默认账号密码：`elastic/123456`
 
 #### 设置ES密码

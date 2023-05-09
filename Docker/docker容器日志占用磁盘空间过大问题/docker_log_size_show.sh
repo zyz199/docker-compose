@@ -4,7 +4,7 @@
 # @description 查看docker容器日志大小
 # @params $? => 代表上一个命令执行后的退出状态: 0->成功,1->失败
 # @example => sh docker_log_size_show.sh
-# @author zhengqingya
+# @author zyz199
 # @date 2021/9/29 17:30
 ####################################
 

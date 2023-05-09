@@ -33,7 +33,7 @@ show master status;
 docker exec -it mysql_slave /bin/bash
 # 登录mysql
 mysql -uroot -proot
-change master to master_host='www.zhengqingya.com',master_port=3306, master_user='slave', master_password='123456', master_log_file='mysql-bin.000003', master_log_pos= 769, master_connect_retry=30;
+change master to master_host='www.xxx.com',master_port=3306, master_user='slave', master_password='123456', master_log_file='mysql-bin.000003', master_log_pos= 769, master_connect_retry=30;
 # 开启主从同步过程  【停止命令：stop slave;】
 start slave;
 # 查看主从同步状态
@@ -42,7 +42,7 @@ show slave status \G
 # 如果Slave_IO_Running为Connecting，SlaveSQLRunning为Yes，则说明配置有问题，这时候就要检查配置中哪一步出现问题了哦，可根据Last_IO_Error字段信息排错或谷歌…
 # *************************** 1. row ***************************
 #                Slave_IO_State: Waiting for master to send event
-#                   Master_Host: www.zhengqingya.com
+#                   Master_Host: www.xxx.com
 #                   Master_User: slave
 #                   Master_Port: 3306
 #                 Connect_Retry: 30
@@ -72,7 +72,7 @@ show slave status \G
 # 先在从库停止主从同步
 stop slave;
 # 导出主库数据
-mysqldump -h www.zhengqingya.com -P 3306 -uroot -proot --all-databases > /tmp/all.sql
+mysqldump -h www.xxx.com -P 3306 -uroot -proot --all-databases > /tmp/all.sql
 # 导入到从库
 mysql -uroot -proot
 source /tmp/all.sql;
@@ -83,7 +83,7 @@ docker exec -it mysql_master /bin/bash
 mysql -uroot -proot
 show master status;
 # 从库操作
-change master to master_host='www.zhengqingya.com',master_port=3306, master_user='slave', master_password='123456', master_log_file='mysql-bin.000004', master_log_pos= 488117, master_connect_retry=30;
+change master to master_host='www.xxx.com',master_port=3306, master_user='slave', master_password='123456', master_log_file='mysql-bin.000004', master_log_pos= 488117, master_connect_retry=30;
 start slave;
 # 查看主从同步状态
 show slave status \G

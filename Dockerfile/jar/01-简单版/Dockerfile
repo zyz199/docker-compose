@@ -2,7 +2,7 @@
 FROM openjdk:8-jre-alpine
 
 # 维护者信息
-MAINTAINER zhengqingya
+MAINTAINER zhangyuezong
 
 # 添加jar包到容器中 -- tips: app.jar 和 Dockerfile 在同一级
 ADD app.jar /home/

@@ -10,10 +10,10 @@ docker-compose -f docker-compose-prometheus.yml -p prometheus up -d
 docker logs -fn10 prometheus-grafana
 ```
 
-1. grafana访问地址：[`http://ip地址:3000`](http://www.zhengqingya.com:3000)
+1. grafana访问地址：[`http://ip地址:3000`](http://www.xxx.com:3000)
    默认登录账号密码：`admin/admin`
-2. prometheus访问地址: [`http://ip地址:9090`](http://www.zhengqingya.com:9090)
-3. exporter访问地址: [`http://ip地址:9100/metrics`](http://www.zhengqingya.com:9100/metrics)
+2. prometheus访问地址: [`http://ip地址:9090`](http://www.xxx.com:9090)
+3. exporter访问地址: [`http://ip地址:9100/metrics`](http://www.xxx.com:9100/metrics)
 
 ![prometheus-targets.png](images/prometheus-targets.png)
 

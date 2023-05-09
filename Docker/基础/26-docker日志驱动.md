@@ -19,7 +19,7 @@ version: '3'
 
 services:
   logstash:
-    image: registry.cn-hangzhou.aliyuncs.com/zhengqing/logstash:7.14.1     # 原镜像`logstash:7.14.1`
+    image: registry.cn-hangzhou.aliyuncs.com/zhangyuezong/logstash:7.14.1     # 原镜像`logstash:7.14.1`
     container_name: elk_logstash
     restart: unless-stopped
     environment:
@@ -80,7 +80,7 @@ output {
 ##### 方式一：docker
 
 ```shell
-docker run -d --name test -p 666:80 --log-driver gelf --log-opt gelf-address=udp://127.0.0.1:12201 --log-opt tag=test registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev
+docker run -d --name test -p 666:80 --log-driver gelf --log-opt gelf-address=udp://127.0.0.1:12201 --log-opt tag=test registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev
 # 发起请求
 curl 127.0.0.1:666/api/log
 ```
@@ -92,7 +92,7 @@ version: '3'
 
 services:
   test:
-    image: registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev
+    image: registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev
     container_name: test
     ports:
       - "666:80"

@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-MAINTAINER zhengqingya
+MAINTAINER zhangyuezong
 
 # 解决时差8小时问题
 ENV TZ=Asia/Shanghai

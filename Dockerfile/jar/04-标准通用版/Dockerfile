@@ -1,8 +1,8 @@
 # 使用自制jdk
-FROM registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine
 
 # 维护者信息
-MAINTAINER zhengqingya
+MAINTAINER zhangyuezong
 
 # 设置环境变量-运行时也可传参进来耍哈
 ENV JAVA_OPTS ""

@@ -43,7 +43,7 @@ services:
     environment:
       - GRAYLOG_PASSWORD_SECRET=somepasswordpepper # CHANGE ME (must be at least 16 characters)!
       - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918 # Password: admin
-      - GRAYLOG_HTTP_EXTERNAL_URI=http://www.zhengqingya.com:9001/ # TODO 这里填写自己的ip地址
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://www.xxx.com:9001/ # TODO 这里填写自己的ip地址
     ports:
       # Graylog web interface and REST API
       - 9001:9000

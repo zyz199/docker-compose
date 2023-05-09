@@ -11,7 +11,7 @@ Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器。
 
 ```shell
 # 进入自己的安装目录
-cd /Users/zhengqingya/IT_zhengqing/soft/soft-dev/Docker
+cd /Users/zhangyuezong/soft/soft-dev/Docker
 
 # 下载： https://github.com/goharbor/harbor/releases/
 wget https://github.com/goharbor/harbor/releases/download/v2.3.2/harbor-offline-installer-v2.3.2.tgz
@@ -40,7 +40,7 @@ vim harbor.yml
 
 # The IP address or hostname to access admin UI and registry service.
 # DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.
-hostname: harbor.zhengqingya.com
+hostname: harbor.zhangyuezong.com
 
 # http related config
 http:
@@ -65,7 +65,7 @@ http:
 # Uncomment external_url if you want to enable external proxy
 # And when it enabled the hostname will no longer used
 # external_url: https://reg.mydomain.com:8433
-external_url: http://harbor.zhengqingya.com:11000
+external_url: http://harbor.zhangyuezong.com:11000
 
 # The initial password of Harbor admin
 # It only works in first time to install harbor
@@ -83,7 +83,7 @@ database:
   max_open_conns: 900
 
 # The default data volume
-data_volume: /Users/zhengqingya/IT_zhengqing/soft/soft-dev/Docker/harbor/data
+data_volume: /Users/zhangyuezong/soft/soft-dev/Docker/harbor/data
 
 # Harbor Storage settings by default is using /data dir on local filesystem
 # Uncomment storage_service setting If you want to using external storage
@@ -156,7 +156,7 @@ log:
     # are all valid.
     rotate_size: 200M
     # The directory on your host that store log
-    location: /Users/zhengqingya/IT_zhengqing/soft/soft-dev/Docker/harbor/log
+    location: /Users/zhangyuezong/soft/soft-dev/Docker/harbor/log
 
   # Uncomment following lines to enable external syslog endpoint.
   # external_endpoint:
@@ -309,7 +309,7 @@ sudo vim /etc/hosts
 再次登录，成功！
 
 ```shell
-docker login -u admin -p Harbor12345 harbor.zhengqingya.com:11000
+docker login -u admin -p Harbor12345 harbor.zhangyuezong.com:11000
 ```
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/13c36c65816c46cdb7627a3da2538865.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOR5riF,size_20,color_FFFFFF,t_70,g_se,x_16)
@@ -318,9 +318,9 @@ docker login -u admin -p Harbor12345 harbor.zhengqingya.com:11000
 #### 2、docker推送镜像
 
 ```shell
-# docker tag SOURCE_IMAGE[:TAG] harbor.zhengqingya.com:11000/test/REPOSITORY[:TAG]
-docker tag registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer:1.24.1 127.0.0.1:11000/test/portainer:1.24.1
-# docker push harbor.zhengqingya.com:11000/test/REPOSITORY[:TAG]
+# docker tag SOURCE_IMAGE[:TAG] harbor.zhangyuezong.com:11000/test/REPOSITORY[:TAG]
+docker tag registry.cn-hangzhou.aliyuncs.com/zhangyuezong/portainer:1.24.1 127.0.0.1:11000/test/portainer:1.24.1
+# docker push harbor.zhangyuezong.com:11000/test/REPOSITORY[:TAG]
 docker push 127.0.0.1:11000/test/portainer:1.24.1
 ```
 
@@ -342,7 +342,7 @@ docker pull 127.0.0.1:11000/test/portainer:1.24.1
 安装harbor报错如下：
 
 ```
-prepare base dir is set to /Users/zhengqingya/IT_zhengqing/soft/soft-dev/Docker/harbor
+prepare base dir is set to /Users/zhangyuezong/soft/soft-dev/Docker/harbor
 Error happened in config validation...
 ERROR:root:Error: The protocol is https but attribute ssl_cert is not set
 ```

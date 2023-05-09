@@ -17,5 +17,5 @@ cd /var/fdfs
 # 执行如下命令,会返回在storage存储文件的路径信息,然后拼接上ip地址即可测试访问
 /usr/bin/fdfs_upload_file /etc/fdfs/client.conf test.jpg
 # ex:
-www.zhengqingya.com:8888/group1/M00/00/00/rBEAAl8aYsuABe4wAAhfG6Hv0Jw357.jpg
+www.xxx.com:8888/group1/M00/00/00/rBEAAl8aYsuABe4wAAhfG6Hv0Jw357.jpg
 ```

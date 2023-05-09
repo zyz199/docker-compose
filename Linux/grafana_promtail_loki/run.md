@@ -9,5 +9,5 @@ chmod 777 $PWD/grafana_promtail_loki/grafana/log
 docker-compose -f docker-compose-grafana-promtail-loki.yml -p grafana_promtail_loki up -d
 ```
 
-访问地址：[`http://ip地址:3000`](http://www.zhengqingya.com:3000)
+访问地址：[`http://ip地址:3000`](http://www.xxx.com:3000)
 默认登录账号密码：`admin/admin`

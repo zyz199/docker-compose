@@ -1,5 +1,5 @@
 # https://opensumi.com/zh
-# docker run --rm -d  -p 20000:8000/tcp registry.cn-hangzhou.aliyuncs.com/zhengqing/opensumi-web:latest
+# docker run --rm -d  -p 20000:8000/tcp registry.cn-hangzhou.aliyuncs.com/zhangyuezong/opensumi-web:latest
 version: '3'
 services:
   activemq:

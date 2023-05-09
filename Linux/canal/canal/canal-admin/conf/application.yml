@@ -6,7 +6,7 @@ spring:
     time-zone: GMT+8
 
 spring.datasource:
-  address: www.zhengqingya.com:3306
+  address: www.xxx.com:3306
   database: canal_manager
   username: root
   password: root

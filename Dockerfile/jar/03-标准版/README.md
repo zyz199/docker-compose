@@ -4,16 +4,16 @@
 
 ```shell
 # 打包镜像 -f:指定Dockerfile文件路径 --no-cache:构建镜像时不使用缓存
-docker build -f Dockerfile --build-arg JAVA_OPTS="-XX:+UseG1GC" -t "registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev" . --no-cache
+docker build -f Dockerfile --build-arg JAVA_OPTS="-XX:+UseG1GC" -t "registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev" . --no-cache
 
 # 推送镜像
-docker push registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev
+docker push registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev
 
 # 拉取镜像
-docker pull registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev
+docker pull registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev
 
 # 运行
-docker run -d -p 8080:666 --name test -e server.port=666 registry.cn-hangzhou.aliyuncs.com/zhengqing/test:dev
+docker run -d -p 8080:666 --name test -e server.port=666 registry.cn-hangzhou.aliyuncs.com/zhangyuezong/test:dev
 
 # 删除旧容器
 docker ps -a | grep test | grep dev | awk '{print $1}' | xargs -i docker stop {} | xargs -I docker rm {}

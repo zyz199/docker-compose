@@ -15,9 +15,9 @@
         <!-- 定义如何监测后端数据库是否健康 -->
         <heartbeat>select user()</heartbeat>
         <!-- 写数据库 -->
-        <writeHost host="www.zhengqingya.com" url="www.zhengqingya.com:3306" user="root" password="root">
+        <writeHost host="www.xxx.com" url="www.xxx.com:3306" user="root" password="root">
             <!-- 读数据库 -->
-            <readHost host="www.zhengqingya.com" url="www.zhengqingya.com:3307" user="root" password="root" />
+            <readHost host="www.xxx.com" url="www.xxx.com:3307" user="root" password="root" />
         </writeHost>
     </dataHost>
 </mycat:schema>

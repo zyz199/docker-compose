@@ -7,7 +7,7 @@ chmod -R 777 ./jenkins
 docker-compose -f docker-compose-jenkins.yml -p jenkins up -d
 ```
 
-访问地址：[`ip地址:10000`](http://www.zhengqingya.com:10000)
+访问地址：[`ip地址:10000`](http://www.xxx.com:10000)
 
 #### 查看密码
 

@@ -16,7 +16,7 @@ docker exec -it seata-server sh
 docker logs -f seata-server
 ```
 
-访问seata控制台：[`ip地址:7091`](http://www.zhengqingya.com:7091)
+访问seata控制台：[`ip地址:7091`](http://www.xxx.com:7091)
 登录账号密码默认：`seata/seata`
 
 ![seata-login.png](images/seata-login.png)

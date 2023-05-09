@@ -2,10 +2,10 @@
 
 ```shell
 # 构建镜像 注：有点慢
-docker build -t registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-wkhtmltopdf . --no-cache
+docker build -t registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-wkhtmltopdf . --no-cache
 # 推送镜像
-docker push registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-wkhtmltopdf
+docker push registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-wkhtmltopdf
 
 # Dockerfile中引用新镜像
-# FROM registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-wkhtmltopdf
+# FROM registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-wkhtmltopdf
 ```

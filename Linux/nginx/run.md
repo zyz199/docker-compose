@@ -11,4 +11,4 @@ docker exec -it nginx /bin/bash
 nginx -s reload
 ```
 
-访问地址：[`ip地址:80`](http://www.zhengqingya.com:80)
+访问地址：[`ip地址:80`](http://www.xxx.com:80)

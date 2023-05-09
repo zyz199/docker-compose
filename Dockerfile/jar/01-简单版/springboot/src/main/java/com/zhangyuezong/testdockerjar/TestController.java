@@ -1,4 +1,4 @@
-package com.zhengqing.testdockerjar;
+package com.zhangyuezong.testdockerjar;
 
 import cn.hutool.core.date.DateUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * <p> 测试api </p>
  *
- * @author zhengqingya
+ * @author zhangyuezong
  * @description
  * @date 2022/5/4 9:04 下午
  */

@@ -6,4 +6,4 @@
 docker-compose -f docker-compose-rocketmq.yml -p rocketmq up -d
 ```
 
-访问地址：[`http://ip地址:9002`](http://www.zhengqingya.com:9002)
+访问地址：[`http://ip地址:9002`](http://www.xxx.com:9002)

@@ -41,7 +41,7 @@ docker pull nginx
 > conf.d: 配置文件子目录
 
 ```shell
-mkdir -p /zhengqingya/soft/nginx/html /zhengqingya/soft/nginx/logs /zhengqingya/soft/nginx/conf /zhengqingya/soft/nginx/conf/conf.d
+mkdir -p /soft/nginx/html /soft/nginx/logs /soft/nginx/conf /soft/nginx/conf/conf.d
 ```
 
 ### 三、找到nginx镜像容器里面的配置文件、日志文件等位置 -> 目的：运行启动nginx时，将宿主机中的配置文件映射到容器中的配置文件（将nginx容器中的配置文件挂载到宿主机上） -> 即nginx启动后，使用的是宿主机中的配置
@@ -90,8 +90,8 @@ cd /var/log/nginx
 ### 四、拷贝容器内nginx默认配置文件到宿主机中，容器名或容器ID:执行docker ps命令查看
 
 ```shell
-docker cp 161d51f2f6c0:/etc/nginx/nginx.conf /zhengqingya/soft/nginx_80/conf
-docker cp 161d51f2f6c0:/etc/nginx/conf.d/default.conf /zhengqingya/soft/nginx_80/conf/conf.d
+docker cp 161d51f2f6c0:/etc/nginx/nginx.conf /soft/nginx_80/conf
+docker cp 161d51f2f6c0:/etc/nginx/conf.d/default.conf /soft/nginx_80/conf/conf.d
 ```
 
 > 温馨小提示：
@@ -111,19 +111,19 @@ docker cp 161d51f2f6c0:/etc/nginx/conf.d/default.conf /zhengqingya/soft/nginx_80
 #### 执行如下命令部署 -> 启动运行nginx容器
 
 ```shell
-docker run -d -p 81:80 --name nginx_80 -v /zhengqingya/soft/nginx_80/html:/usr/share/nginx/html -v /zhengqingya/soft/nginx_80/conf/nginx.conf:/etc/nginx/nginx.conf -v /zhengqingya/soft/nginx_80/conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf -v /zhengqingya/soft/nginx_80/logs:/var/log/nginx nginx
+docker run -d -p 81:80 --name nginx_80 -v /soft/nginx_80/html:/usr/share/nginx/html -v /soft/nginx_80/conf/nginx.conf:/etc/nginx/nginx.conf -v /soft/nginx_80/conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf -v /soft/nginx_80/logs:/var/log/nginx nginx
 -d: 以后台模式启动容器 -> 后台运行该容器
 -p 81:80: 将nginx容器的 80 端口映射到宿主机的 81 端口       注:部分服务器需要手动去放行端口哦
 --name nginx_80: 将容器命名为nginx_80
--v /zhengqingya/soft/nginx_80/html:/usr/share/nginx/html: 将宿主机中创建的 html 目录挂载到容器的 /usr/share/nginx/html 目录
+-v /soft/nginx_80/html:/usr/share/nginx/html: 将宿主机中创建的 html 目录挂载到容器的 /usr/share/nginx/html 目录
 ```
 
 ### 六、测试访问
 
-#### （1）到宿主机 /zhengqingya/soft/nginx/html 目录下创建 index.html 静态资源
+#### （1）到宿主机 /soft/nginx/html 目录下创建 index.html 静态资源
 
 ```shell
-cd /zhengqingya/soft/nginx/html
+cd /soft/nginx/html
 
 touch index.html # 创建文件
 
@@ -161,18 +161,18 @@ vi 命令 -> 修改内容,宿主机和容器配置互不影响
 # nginx配置反向代理 -> proxy_pass
 
 nginx反向代理主要通过proxy_pass来配置，将你项目的开发机地址填写到proxy_pass后面，正常的格式为proxy_pass URL即可 vim
-/zhengqingya/soft/nginx_test/conf/conf.d/default.conf
+/soft/nginx_test/conf/conf.d/default.conf
 
 ```
 server {
     listen 80;
     location / {
-        proxy_pass http://www.zhengqingya.com:81;  # 配置反向代理
+        proxy_pass http://www.x x x.com:81;  # 配置反向代理
     }
 }
 ```
 
-# upstream模块实现负载均衡 -> vim /zhengqingya/soft/nginx_test/conf/nginx.conf
+# upstream模块实现负载均衡 -> vim /soft/nginx_test/conf/nginx.conf
 
 ```
 upstream test { 
@@ -294,7 +294,7 @@ http {
   
   	server {
         listen       80;
-        server_name  www.zhengqingya.com;#域名名称
+        server_name  www.xxx.com;#域名名称
 
         #charset koi8-r;
         #access_log  /var/log/nginx/host.access.log  main;
@@ -307,7 +307,7 @@ http {
             root   /usr/share/nginx/html;
       		try_files $uri $uri/ @router;
             index  index.html index.htm;
-       		#proxy_pass http://zhengqingya.gitee.io; # 代理的ip地址和端口号
+       		#proxy_pass http://xxx.github.com; # 代理的ip地址和端口号
             #proxy_connect_timeout 600; #代理的连接超时时间（单位：毫秒）
             #proxy_read_timeout 600; #代理的读取资源超时时间（单位：毫秒）
         } 
@@ -317,7 +317,7 @@ http {
         }
 
         location ^~ /api {  # ^~/api/表示匹配前缀为api的请求
-            proxy_pass  http://www.zhengqingya.com:9528/api/;  # 注：proxy_pass的结尾有/， -> 效果：会在请求时将/api/*后面的路径直接拼接到后面
+            proxy_pass  http://www.xxx.com:9528/api/;  # 注：proxy_pass的结尾有/， -> 效果：会在请求时将/api/*后面的路径直接拼接到后面
       
       		# proxy_set_header作用：设置发送到后端服务器(上面proxy_pass)的请求头值  
                 # 【当Host设置为 $http_host 时，则不改变请求头的值;
@@ -333,7 +333,7 @@ http {
         }
     
     	location ^~ /blog/ {
-            proxy_pass  http://zhengqingya.gitee.io/blog/;  # ^~/blog/表示匹配前缀是blog的请求，proxy_pass的结尾有/， 则会把/blog/*后面的路径直接拼接到后面，即移除blog
+            proxy_pass  http://xxx.github.io/blog/;  # ^~/blog/表示匹配前缀是blog的请求，proxy_pass的结尾有/， 则会把/blog/*后面的路径直接拼接到后面，即移除blog
       
             proxy_set_header Host $proxy_host; # 改变请求头值 -> 转发到码云才会成功
             proxy_set_header  X-Real-IP  $remote_addr;

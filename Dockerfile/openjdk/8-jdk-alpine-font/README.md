@@ -2,10 +2,10 @@
 
 ```shell
 # 构建镜像 注：有点慢
-docker build -t registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-font . --no-cache
+docker build -t registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-font . --no-cache
 # 推送镜像
-docker push registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-font
+docker push registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-font
 
 # Dockerfile中引用新镜像
-# FROM registry.cn-hangzhou.aliyuncs.com/zhengqing/openjdk:8-jdk-alpine-font
+# FROM registry.cn-hangzhou.aliyuncs.com/zhangyuezong/openjdk:8-jdk-alpine-font
 ```

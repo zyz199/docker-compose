@@ -29,7 +29,7 @@ docker run -d \
 可以建立一个更新列表文件, 然后通过变量的方式去调用这个列表
 
 ```shell script
-cd /zhengqingya/soft/docker
+cd /zhangyuezong/soft/docker
 # ① 
 echo 'small-tools
       code-api' > watchtower.list

@@ -6,7 +6,7 @@
 # 可参考 https://www.rabbitmq.com/clustering.html#creating-ram
 # @params $? => 代表上一个命令执行后的退出状态: 0->成功,1->失败
 # @example => sh init-rabbitmq.sh
-# @author zhengqingya
+# @author zyz199
 # @date 2021/11/24 14:24
 ####################################
 

@@ -8,4 +8,4 @@ docker logs rancher 2>&1 | grep "Bootstrap Password:"
 # 2023/01/11 02:07:22 [INFO] Bootstrap Password: wgxxj2vksgfj89xkll2cwtf9b5gfjg9vcjpmwgnc5rzsvggxjl2bc9
 ```
 
-访问地址：[`http://ip地址:20000`](http://www.zhengqingya.com:20000)
+访问地址：[`http://ip地址:20000`](http://www.xxx.com:20000)

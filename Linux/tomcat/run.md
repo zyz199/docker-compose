@@ -4,4 +4,4 @@
 docker-compose -f docker-compose-tomcat.yml -p tomcat up -d
 ```
 
-访问地址：[`ip地址:8081`](http://www.zhengqingya.com:8081)
+访问地址：[`ip地址:8081`](http://www.xxx.com:8081)

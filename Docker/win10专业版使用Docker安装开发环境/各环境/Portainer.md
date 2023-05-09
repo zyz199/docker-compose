@@ -2,10 +2,10 @@
 
 ```shell
 # docker pull portainer/portainer
-docker pull registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer
+docker pull registry.cn-hangzhou.aliyuncs.com/zhangyuezong/portainer
 
 # 创建文件夹 md或mkdir命令 【注意是反斜杠哦】
-mkdir E:\zhengqingya\soft\soft-dev\Docker\data\portainer
+mkdir E:\soft\soft-dev\Docker\data\portainer
 # 创建文件
 type nul>test.txt
 # 创建文件并写入内容到文件
@@ -20,8 +20,8 @@ echo 'hello world' >test.txt
 #            -v 本地目录:容器路径(注意：本地目录一定要存在  /e: 表示E盘下  ) 
 #            portainer/portainer: portainer镜像
 #          】
-docker run -d -p 9000:9000 --restart=always --name portainer -v /e/zhengqingya/soft/soft-dev/Docker/data/portainer:/var/run/docker.sock portainer/portainer
-docker run -d -p 9000:9000 --restart=always --name portainer -v /e/zhengqingya/soft/soft-dev/Docker/data/portainer:/var/run/docker.sock registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer
+docker run -d -p 9000:9000 --restart=always --name portainer -v /e/soft/soft-dev/Docker/data/portainer:/var/run/docker.sock portainer/portainer
+docker run -d -p 9000:9000 --restart=always --name portainer -v /e/soft/soft-dev/Docker/data/portainer:/var/run/docker.sock registry.cn-hangzhou.aliyuncs.com/zhangyuezong/portainer
 ```
 
 然后访问 [http://127.0.0.1:9000/](http://127.0.0.1:9000/) 创建用户账号密码

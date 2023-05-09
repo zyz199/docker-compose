@@ -7,11 +7,11 @@
 > yml配置可参考 [docker-compose.yml](../../docker-compose.yml)
 
 ```yml
-# 等同于：docker run -d -p 9000:9000 --restart=always --name portainer -v /var/run/docker.sock:/var/run/docker.sock registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer:1.24.1
+# 等同于：docker run -d -p 9000:9000 --restart=always --name portainer -v /var/run/docker.sock:/var/run/docker.sock registry.cn-hangzhou.aliyuncs.com/zhangyuezong/portainer:1.24.1
 version: '3'
 services:
   portainer:
-    image: registry.cn-hangzhou.aliyuncs.com/zhengqing/portainer:1.24.1  # 原镜像`portainer/portainer:1.24.1`
+    image: registry.cn-hangzhou.aliyuncs.com/zhangyuezong/portainer:1.24.1  # 原镜像`portainer/portainer:1.24.1`
     container_name: portainer                                            # 容器名为'portainer'
     restart: always                                                      # 指定容器退出后的重启策略为始终重启
     volumes:                                                             # 数据卷挂载路径设置,将本机目录映射到容器目录

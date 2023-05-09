@@ -21,7 +21,7 @@ STATE="四川省" # 省份
 CITY="成都市" # 城市
 ORGANIZATION="科技公司" # 机构名称
 ORGANIZATIONAL_UNIT="好好学习" # 机构单位
-EMAIL="zhengqingya@it.com" # 邮箱
+EMAIL="zhangyuezong@it.com" # 邮箱
 
 # 生成CA密钥
 openssl genrsa -aes256 -passout pass:\$PASSWORD  -out ca-key.pem 2048

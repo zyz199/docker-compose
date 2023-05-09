@@ -8,5 +8,5 @@ docker-compose -f docker-compose-sonarqube.yml -p sonarqube up -d
 # docker-compose -f docker-compose-sonarqube6.7.1.yml -p sonarqube up -d
 ```
 
-访问地址：[`http://ip地址:9005`](http://www.zhengqingya.com:9005)
+访问地址：[`http://ip地址:9005`](http://www.xxx.com:9005)
 默认登录账号密码：`admin/admin`

@@ -11,7 +11,7 @@ docker-compose -f docker-compose-sentinel.yml -p sentinel up -d
 # docker-compose -f docker-compose-sentinel-nacos.yml -p sentinel up -d
 ```
 
-访问地址：[`ip地址:8858`](http://www.zhengqingya.com:8858)
+访问地址：[`ip地址:8858`](http://www.xxx.com:8858)
 登录账号密码：`sentinel/sentinel`
 
 #### SpringCloud中规则持久化到nacos
@@ -34,7 +34,7 @@ spring:
       eager: true   # 禁用控制台懒加载
       web-context-unify: false # 关闭调用链路收敛 => 实现链路流控
       transport:
-        dashboard: www.zhengqingya.com:8858 # 控制台地址
+        dashboard: www.xxx.com:8858 # 控制台地址
         client-ip: ${spring.cloud.client.ip-address} # 获取本机IP地址
         port: 18719 # 启动该服务，会在应用程序的相应服务器上启动HTTP Server，并且该服务器将与Sentinel dashboard进行交互
       # ============== ↓↓↓↓↓↓ 增加规则持久化配置到nacos ↓↓↓↓↓↓ ==============

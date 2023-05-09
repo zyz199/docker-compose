@@ -10,4 +10,4 @@ docker-compose -f docker-compose-portainer.yml -p portainer up -d
 # -d：后台启动
 ```
 
-访问地址：[`ip地址:9000`](http://www.zhengqingya.com:9000)
+访问地址：[`ip地址:9000`](http://www.xxx.com:9000)

@@ -2,7 +2,7 @@
 version: '3'
 services:
   minio:
-    image: registry.cn-hangzhou.aliyuncs.com/zhengqing/minio:RELEASE.2023-01-02T09-40-09Z  # 原镜像`minio/minio:RELEASE.2023-01-02T09-40-09Z`
+    image: registry.cn-hangzhou.aliyuncs.com/zhangyuezong/minio:RELEASE.2023-01-02T09-40-09Z  # 原镜像`minio/minio:RELEASE.2023-01-02T09-40-09Z`
     container_name: minio                                        # 容器名为'minio'
     restart: unless-stopped                                      # 指定容器退出后的重启策略为始终重启，但是不考虑在Docker守护进程启动时就已经停止了的容器
     volumes:                                                     # 数据卷挂载路径设置,将本机目录映射到容器目录

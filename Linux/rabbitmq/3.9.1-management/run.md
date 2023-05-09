@@ -15,6 +15,6 @@ rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 rabbitmq-plugins list
 ```
 
-web管理端：[`ip地址:15672`](http://www.zhengqingya.com:15672)
+web管理端：[`ip地址:15672`](http://www.xxx.com:15672)
 登录账号密码：`admin/admin`
 

@@ -76,14 +76,14 @@ docker-credential-pass list
 
 
 # 查看验证信息
-docker login -u admin -p Harbor12345 harbor.zhengqingya.com:11000
+docker login -u admin -p Harbor12345 harbor.zhangyuezong.com:11000
 
 # 查看配置
 cat /root/.docker/config.json
 # 可以看到密码信息没有保存在json文件中，那我们去验证一下密码仓库是否有保存
 # 查看密码仓库存储信息
 docker-credential-pass list
-# {"harbor.zhengqingya.com:11000":"admin"}
+# {"harbor.zhangyuezong.com:11000":"admin"}
 
 pass
 # Password Store
